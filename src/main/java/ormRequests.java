@@ -1,13 +1,28 @@
 import org.hibernate.Session;
+<<<<<<< Updated upstream
+=======
+import org.hibernate.SessionFactory;
+>>>>>>> Stashed changes
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.List;
 
 public class ormRequests {
+<<<<<<< Updated upstream
 
     private List select(String input) {
         Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+=======
+    SessionFactory sessionFactory;
+
+    public ormRequests() {
+        sessionFactory = HibernateUtil.getSessionFactory();
+    }
+
+    private List select(String input) {
+        Session session = sessionFactory.getCurrentSession();
+>>>>>>> Stashed changes
         Transaction tr = session.beginTransaction();
         Query query = session.createQuery(input);
         List result = query.getResultList();
@@ -50,5 +65,8 @@ public class ormRequests {
                 "from avtoowners a left join vendor v on a.vendor_id=v.id");
         return result;
     }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 }

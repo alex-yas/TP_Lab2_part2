@@ -2,6 +2,12 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+<<<<<<< Updated upstream
+=======
+        Avtoowners owner= new Avtoowners();
+        owner.setAddress("Зеленая 3");
+        System.out.println(owner.getAddress());
+>>>>>>> Stashed changes
         flywayWork.initialize();
         sqlRequest m = new sqlRequest();
         System.out.println("Число машин 2017 года производства: " + m.Count2017());

@@ -2,6 +2,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+<<<<<<< Updated upstream
 @Table(name = "avtoowners")
 public class Avto {
     @Id
@@ -40,6 +41,25 @@ public class Avto {
     private Integer avto_year;
 
 
+=======
+@Table(name = (String)"avtoowners",schema =(String)"public",catalog = (String)"postgres")
+public class Avto {
+    private Integer id;
+    private String surname;
+    private String owner_name;
+    private String middle_name;
+    private String tel_number;
+    private String address;
+    private String mark;
+    private String avto_number;
+    private String teh_number;
+    private Integer avto_cost;
+    private Integer avto_year;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = (String)"id")
+>>>>>>> Stashed changes
     public Integer getId() {
         return id;
     }
@@ -47,7 +67,12 @@ public class Avto {
     public void setId(Integer inpId) {
         this.id = inpId;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"surname")
+>>>>>>> Stashed changes
     public String getSurname() {
         return surname;
     }
@@ -55,7 +80,12 @@ public class Avto {
     public void setSurname(String surname) {
         this.surname = surname;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"owner_name")
+>>>>>>> Stashed changes
     public String getOwner_name() {
         return owner_name;
     }
@@ -63,7 +93,12 @@ public class Avto {
     public void setOwner_name(String owner_name) {
         this.owner_name = owner_name;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"middle_name")
+>>>>>>> Stashed changes
     public String getMiddle_name() {
         return middle_name;
     }
@@ -71,7 +106,12 @@ public class Avto {
     public void setMiddle_name(String middle_name) {
         this.middle_name = middle_name;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"tel_number")
+>>>>>>> Stashed changes
     public String getTel_number() {
         return tel_number;
     }
@@ -79,7 +119,12 @@ public class Avto {
     public void setTel_number(String tel_number) {
         this.tel_number = tel_number;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"address")
+>>>>>>> Stashed changes
     public String getAddress() {
         return address;
     }
@@ -87,7 +132,12 @@ public class Avto {
     public void setAddress(String address) {
         this.address = address;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"mark")
+>>>>>>> Stashed changes
     public String getMark() {
         return mark;
     }
@@ -95,7 +145,12 @@ public class Avto {
     public void setMark(String mark) {
         this.mark = mark;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"avto_number")
+>>>>>>> Stashed changes
     public String getAvto_number() {
         return avto_number;
     }
@@ -103,7 +158,12 @@ public class Avto {
     public void setAvto_number(String avto_number) {
         this.avto_number = avto_number;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"teh_number")
+>>>>>>> Stashed changes
     public String getTeh_number() {
         return teh_number;
     }
@@ -111,7 +171,12 @@ public class Avto {
     public void setTeh_number(String teh_number) {
         this.teh_number = teh_number;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"avto_cost")
+>>>>>>> Stashed changes
     public Integer getAvto_cost() {
         return avto_cost;
     }
@@ -119,7 +184,12 @@ public class Avto {
     public void setAvto_cost(Integer avto_cost) {
         this.avto_cost = avto_cost;
     }
+<<<<<<< Updated upstream
 
+=======
+    @Basic
+    @Column(name = (String)"avto_year")
+>>>>>>> Stashed changes
     public Integer getAvto_year() {
         return avto_year;
     }
@@ -130,9 +200,15 @@ public class Avto {
 
     @Override
     public boolean equals(Object obj) {
+<<<<<<< Updated upstream
         if (obj == null && this == null)
             return true;
         if (obj == null || this.getClass() != obj.getClass())
+=======
+        if (this==obj)
+            return true;
+        if (obj == null || getClass() != obj.getClass())
+>>>>>>> Stashed changes
             return false;
         Avto myObj = (Avto) obj;
         return Objects.equals(this.id, myObj.id) && Objects.equals(this.address, myObj.address)
